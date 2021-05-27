@@ -22,6 +22,6 @@ export default ({
 
   return data.map((d, i) => ({
     x: i * hfactor + margin,
-    y: (max === min ? 1 : (max - d)) * vfactor + margin + textHeight
+    y:d==0?(max === min?height:height-1): ((max === min ? 1 : (max - d)) * vfactor + margin + textHeight)
   }))
 }
